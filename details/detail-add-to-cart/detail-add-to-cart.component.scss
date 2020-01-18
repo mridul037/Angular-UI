@@ -1,0 +1,13 @@
+.button-container{
+    padding: 20px; 
+    text-align: center;
+    .button{
+        border:  2px solid  #FF6C00;
+         height: 52px;
+        line-height: 3.6;
+         border-radius: 4px;
+         font-size: 14px;
+         font-weight: 800;
+         cursor: pointer;
+    }
+}

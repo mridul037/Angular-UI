@@ -1,0 +1,6 @@
+
+<app-listing-title *ngIf="listingTitleDataFetched" [listingTitleData]="listingTitleData"></app-listing-title>
+<app-listing-styles *ngIf="listingTitleDataFetched" [intermediateData]="ProductListHeaderData.data.styles">
+</app-listing-styles>
+<app-title-icon-list [titleIconListData]="titleIconListData"></app-title-icon-list>
+<app-listing-products *ngIf="productListDataFetched" [listingProductData]="productListData['data']"></app-listing-products>

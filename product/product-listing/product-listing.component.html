@@ -1,0 +1,8 @@
+<app-product-grid *ngIf="productFetched"  [products]="products"></app-product-grid>
+<div
+infiniteScroll
+[infiniteScrollDistance]="0.5"
+[infiniteScrollThrottle]="1000"
+(scrolled)="onScrollDown()"
+>
+</div>

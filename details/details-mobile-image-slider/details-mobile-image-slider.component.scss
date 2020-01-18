@@ -1,0 +1,27 @@
+.pdp-top-container{
+    background-color: #F7F7F7;
+    .pdp-header-container{
+        padding: 8px;
+        .swiper-pagination-bullet-active {
+            background-color: #000 !important;
+            color: #000 !important;
+          }
+    }
+.slider-image{
+    object-fit: contain;
+    margin-bottom: 36px;
+    .swiper-pagination-bullet-active {
+        background-color: #000 !important;
+        color: #000 !important;
+      }
+}
+.pdp-bottom-container{
+    padding-left: 8px;
+     padding-right: 8px;   
+}
+}
+.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    color: #000 !important;
+  }
+

@@ -1,0 +1,16 @@
+.product-title-wrapper{
+    display: flex; 
+    margin-left:16px; 
+    margin-top: 12px;
+     margin-bottom: 12px;
+
+     .product-title{
+        font-size: 18px;
+        font-weight:bold;
+         margin-right: 8px;
+     }
+     .change-product-title{
+        margin-left: 8px;
+        color: #FF6C00;
+     }
+}

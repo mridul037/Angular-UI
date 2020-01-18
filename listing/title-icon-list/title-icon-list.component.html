@@ -1,0 +1,10 @@
+<div style="border:1px solid black; border-radius: 8px;margin: 16px;">
+    <ng-container *ngFor="let item of titleIconListData.styles; let i = index">
+        <div style="padding-left: 24px;padding-right: 24px;padding-top: 12px;padding-bottom: 12px;line-height: 3;font-weight: bold;" fxLayout="row" fxLayoutAlign="space-between start">
+            {{item.title}}
+            <img [lazyLoad]="item.image" alt="" class="product-style-image" />       
+        </div>
+        <mat-divider *ngIf="i < titleIconListData.styles.length -1"></mat-divider>
+    
+    </ng-container>
+    </div>

@@ -1,0 +1,66 @@
+.mobile-product-link {
+    width: 49%;
+    background: #fff;
+    margin: 12px 0px;
+    text-decoration: none;
+    .mobile-product-card {
+      padding-top: 28px;
+      padding-bottom: 28px;
+      background: #f7f7f7;
+      padding-right: 12px;
+      padding-left: 12px;
+      position: relative;
+      .mobile-product-image-container {
+        text-align: center;
+        height: 207px;
+  
+        img {
+          font-size: 12px;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+      .overlay-Text {
+        top: 12px;
+        left: 16px;
+        color: #ff6c00;
+        font-size: 9px;
+        font-weight: bold;
+        position: absolute;
+        margin: 0px;
+      }
+    }
+    .product-text-container {
+      padding-right: 4px;
+      padding-left: 4px;
+  
+      .product-price-container {
+        margin: 8px 0px;
+        .product-price {
+          padding-right: 4px;
+          font-size: 13px;
+          font-weight: bold;
+        }
+        .product-mrp {
+          padding-left: 4px;
+          font-size: 13px;
+        }
+      }
+      .product-title-container {
+        font-size: 14px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-bottom: 4px;
+        margin: 0px;
+      }
+      .product-subTitle-container {
+        padding-top: 4px;
+        font-size: 14px;
+        color: #ff6c00;
+        margin: 0px;
+      }
+    }
+  }
+  

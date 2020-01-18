@@ -1,0 +1,50 @@
+<div class="pdp-top-container" >
+	<div class="pdp-header-container" fxLayout="row" fxLayoutAlign="end center">
+		<button (click)="playyVideo()" mat-icon-button aria-label="icon-button with a share icon">
+			<mat-icon style="font-size: 20px">share</mat-icon>
+		</button>
+		<button mat-icon-button aria-label="icon-button with a shopping icon">
+			<i style="font-size:16px" class="fas fa-shopping-bag"></i>
+		</button>
+	</div>
+	<div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper" *ngIf="!isVideoPlaying">
+				<div class="swiper-slide" *ngFor="let image of carouselData.images">
+					<img [lazyLoad]="image" class="slider-image" [ngStyle]="{
+								height: screenWidth + 'px',
+								width: screenWidth + 'px'
+							}" />
+				</div>
+			</div>
+			<div *ngIf="!isVideoPlaying" class="swiper-pagination"></div>
+			<div class="container" *ngIf="isVideoPlaying">
+				<div class="jumbotron bg-light">
+				 
+			  
+				  <section class="card card-info text-white bg-dark mb-3">
+					<section class="card-img-top">
+					  <youtube-player
+						[videoId]="carouselData.video"
+						(ready)="savePlayer($event)"
+						(change)="onStateChange($event)"
+						[playerVars]="playerVars">
+					  </youtube-player>
+					</section>
+					<div class="card-body"></div>
+				  </section>
+				</div>
+			  </div>
+			<div class="pdp-bottom-container" fxLayout="row" fxLayoutAlign="space-between start">
+				<div  style="font-size: 20px;" mat-icon-button aria-label="icon-button with a video icon">
+					<i class="fas fa-video"></i>
+				</div>
+				<div style="font-size: 20px;" mat-icon-button aria-label="Example icon-button with a heart icon">
+					<i class="far fa-heart"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,26 @@
+
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly">
+    <ng-container *ngFor="let product of products; let i = index">
+      <a class="mobile-product-link">
+        <div fxLayout="column" fxLayoutAlign="center center" class="mobile-product-card">
+          <p *ngIf="product.overlayText" class="overlay-Text">{{product.overlayText.text}}
+          </p>
+          <div class="mobile-product-image-container" fxLayout="column" fxLayoutAlign="center center">
+  
+            <img [lazyLoad]="product.image" />
+          </div>
+        </div>
+        <div class="product-text-container">
+          <div class="product-price-container" fxLayout fxLayoutAlign="space-between">
+            <div>
+              <span class="product-price">Rs. {{product.price.text}}</span>
+              <span class="product-mrp">{{product.mrp.text}}</span>
+            </div>
+            <i class="far fa-heart"></i>
+          </div>
+          <p  class="product-title-container">{{product.title.text}}</p>
+          <p  *ngIf="product.subtitle" class="product-subTitle-container">{{product.subtitle.text}}</p>
+        </div>
+      </a>
+    </ng-container>
+  </div>

@@ -1,0 +1,7 @@
+
+
+<app-details-mobile-image-slider *ngIf="productDetailsData" [carouselData]="productDetailsData['carousel']"></app-details-mobile-image-slider>
+<app-detail-offer *ngIf="productDetailsData" [offerData]="productDetailsData['offer']"></app-detail-offer>
+<app-detail-info *ngIf="productDetailsData"  [detailsData]="productDetailsData['details']"></app-detail-info>
+<app-detail-add-to-cart *ngIf="productDetailsData" [atcData]="productDetailsData['cta']"></app-detail-add-to-cart>
+<app-detail-style-selector *ngIf="productVariantsData" [pdpStyleData]="productVariantsData.feed"></app-detail-style-selector> 

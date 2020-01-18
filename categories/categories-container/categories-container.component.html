@@ -1,0 +1,33 @@
+
+  <div *ngIf="categoriesListFetched">
+  <div *ngIf="categoriesListData.title">
+    <div class="categorylist-conatiner">
+    <span class="categorylist">{{categoriesListData.title}}</span>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+<mat-tab-group mat-stretch-tabs>
+<mat-tab  *ngFor="let item of categoriesListData.feed">
+    <ng-template mat-tab-label>
+        <div  
+        fxLayout="column"
+        fxLayoutAlign="space-between space-between"
+        > 
+        <span>{{ item.title}} </span>
+        </div>
+        </ng-template>
+      
+            <ng-container *ngFor="let list of item.items; let i = index">
+                <div [style.background-color]="list.background.color" class="list-item" fxLayout="row" >
+                    <img [lazyLoad]="list.image" alt="" class="product-style-image" />
+                    <div class="list-title">
+                    {{list.title.text}}
+                    </div>
+                </div>
+          <mat-divider ></mat-divider>
+        </ng-container> 
+    
+ </mat-tab>
+</mat-tab-group> 
+</div>

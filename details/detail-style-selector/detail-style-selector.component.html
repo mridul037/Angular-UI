@@ -1,0 +1,19 @@
+
+      <mat-tab-group mat-stretch-tabs 
+      >
+        <mat-tab label="First" *ngFor="let style of pdpStyleData;">
+            <ng-template mat-tab-label>
+                <div
+                  class="label-container"
+                  fxLayout="column"
+                  fxLayoutAlign="space-between space-between"               
+                >
+                  <span class="label">{{ style.title }} </span>
+                </div>
+              </ng-template>
+          <ng-template matTabContent>
+            <app-style-selection [intermediateData]="style.styles"></app-style-selection>
+          </ng-template>
+        </mat-tab>
+
+      </mat-tab-group>

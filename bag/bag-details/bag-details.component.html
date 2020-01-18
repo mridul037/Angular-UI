@@ -1,0 +1,49 @@
+
+<div class="button-container">
+    <div class="button">
+        {{data.title}}
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div *ngFor="let item of data.items">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <div fxLayout="column" fxLayoutAlign="start start" class="product-image-column">
+            <div class="product-image-container">
+                <img class="product-image" [lazyLoad]=item.image>
+            </div>
+        </div>
+        <div class="product-detail-section" fxLayout="column" fxLayoutAlign="space-between start">
+            <div fxLayout="row" fxLayoutAlign="space-between start">
+                <p class="product-title">{{item.title}}</p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between start">
+                <p class="product-price">Rs. {{item.price}}</p>
+                <p class="product-mrp">{{item.mrp}}</p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between start">
+                <div *ngFor="let description of item.descriptions">
+                    <img [lazyLoad]="description.image" class="varient-style-image">
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between start">
+                <p class="product-quantity">Quantity</p>
+                <select [(value)]="item.quantity" name="quantity" class="product-quantity-dropdown">
+                    <option *ngFor="let qty of cartShowQty()" [value]="qty">{{qty}}
+
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>
+<app-offers [offerData]="data.offer"></app-offers>
+
+<div *ngFor="let costDetail of data.costDetails">
+    <div class="cost-detail-container" fxLayout="row" fxLayoutAlign="space-between start">
+        <p [ngStyle]="{color: costDetail['color']}" style="margin-top: 4px;margin-bottom: 4px;">{{costDetail.title}}
+           
+        </p>
+        <p [ngStyle]="{color: costDetail['color']}" style="margin-top: 4px;margin-bottom: 4px;font-weight: bold;">Rs. {{costDetail.value}}
+    </div>
+</div>

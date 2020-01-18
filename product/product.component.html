@@ -1,0 +1,28 @@
+<cdk-virtual-scroll-viewport itemSize="100">
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly">
+    <ng-container *cdkVirtualFor="let product of products; let i = index">
+      <a class="mobile-product-link">
+        <div fxLayout="column" fxLayoutAlign="center center" class="mobile-product-card">
+          <p *ngIf="product.overlayText" class="overlay-Text">{{product.overlayText}}
+          </p>
+          <div class="mobile-product-image-container" fxLayout="column" fxLayoutAlign="center center">
+  
+            <img [src]="product.image" />
+          </div>
+        </div>
+        <div class="product-text-container">
+          <div class="product-price-container" fxLayout fxLayoutAlign="space-between">
+            <div>
+              <span class="product-price">Rs. {{product.price}}</span>
+              <span class="product-mrp">{{product.mrp}}</span>
+            </div>
+            <i class="far fa-heart"></i>
+          </div>
+          <p  class="product-title-container">{{product.title}}</p>
+          <p  *ngIf="product.subtitle" class="product-subTitle-container">{{product.subtitle}}</p>
+        </div>
+      </a>
+    </ng-container>
+  </div>
+</cdk-virtual-scroll-viewport>
+
