@@ -32,3 +32,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![alt-text](https://github.com/mridul037/Angular-UI/blob/master/mat-tab.png)
   ## FilterPage
 ![alt-text](https://github.com/mridul037/Angular-UI/blob/master/Filters.png)
+  ## SignUp
+![alt-text](https://github.com/mridul037/Angular-UI/blob/master/login.png)
