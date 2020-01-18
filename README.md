@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## UI images
 
 ![alt-text](https://github.com/mridul037/Angular-UI/blob/master/mat-tab.png)
+![alt-text](https://github.com/mridul037/Angular-UI/blob/master/Filters.png)
