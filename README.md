@@ -27,7 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## UI images
-
+# UI images
+  ## CategoryList
 ![alt-text](https://github.com/mridul037/Angular-UI/blob/master/mat-tab.png)
+  ## FilterPage
 ![alt-text](https://github.com/mridul037/Angular-UI/blob/master/Filters.png)
